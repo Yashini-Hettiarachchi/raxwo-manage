@@ -1,0 +1,234 @@
+/* Modal Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px); /* Smooth blur effect */
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-container {
+  background: whitesmoke; /* Light theme */
+  padding: 25px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #333; /* Dark text for light theme */
+}
+
+.dark .modal-container {
+  background: #0F172A; /* Dark navy background for dark mode */
+  color: #E5E7EB; /* Light gray text for contrast */
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 15px;
+  color: #00adb5; /* Cyan highlight */
+}
+
+.dark .modal-title {
+  color: #00adb5; /* Keep cyan for consistency, good contrast with #0F172A */
+}
+
+/* Product Info Section */
+.product-info-section {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dark .product-info-section {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Product Info Item */
+.product-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+/* Info Label */
+.info-label {
+  font-weight: bold;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.dark .info-label {
+  color: #E5E7EB; /* Light gray for dark mode */
+  background-color: transparent;
+}
+
+/* Info Value */
+.info-value {
+  color: #555;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.dark .info-value {
+  color: #E5E7EB; /* Light gray for dark mode */
+  background-color: transparent;
+}
+
+/* Supplier Value */
+.supplier-value {
+  color: #1a68bc;
+  font-weight: bold;
+}
+
+.dark .supplier-value {
+  color: #4a98ec; /* Lighter blue for dark mode */
+  background-color: transparent;
+}
+
+/* Labels */
+.re-p-label {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-family: 'Inter', sans-serif;
+  display: block;
+  text-align: left;
+}
+
+.dark .re-p-label {
+  color: #E5E7EB; 
+  background-color: transparent;
+}
+
+/* Input Fields and Select */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff; /* White background for light mode */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333; /* Dark text for light mode */
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.dark input,
+.dark select {
+  background: #1F2A44; /* Darker background for inputs in dark mode */
+  border: 1px solid #4A5568; /* Gray border for dark mode */
+  color: #E5E7EB; /* Light gray text */
+}
+
+/* Placeholder color */
+input::placeholder,
+select::placeholder {
+  color: #A0AEC0; /* Gray placeholder for light mode */
+}
+
+.dark input::placeholder,
+.dark select::placeholder {
+  color: #A0AEC0; /* Gray placeholder for dark mode */
+}
+
+/* Input focus effect */
+input:focus,
+select:focus {
+  border: 2px solid #1abc9c;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #1abc9c;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.return-product-submit-btn, .return-product-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+.r-p-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Cancel Button */
+.r-p-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.dark .r-p-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.r-p-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Success Message */
+.success-message {
+  color: #1abc9c;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Loading Message */
+.loading {
+  color: #E5E7EB;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}

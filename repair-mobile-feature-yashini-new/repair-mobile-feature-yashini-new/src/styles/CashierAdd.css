@@ -1,0 +1,222 @@
+/* Modal Background */
+.ca-add-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  
+}
+
+
+/* Modal Box */
+.cashier-add-modal-container {
+  background: whitesmoke;
+  padding: 25px;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+  text-align: center;
+  color: black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.dark.cashier-add-modal-container {
+  background: #0F172A; /* Dark navy background for dark mode */
+  color: #E5E7EB; /* Light gray text for contrast */
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 25px;
+  color: #00adb5; /* Highlighted accent */
+}
+
+/* Loading and Error Messages */
+.loading,
+.error-message,
+.success-message {
+  font-size: 14px;
+  color: #ff4d4d; /* Red color for error */
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #2ecc71; /* Green color for success */
+}
+
+/* Form Styling */
+.add-cashier-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Left column (for general details) */
+.left-column {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Right column (for prices) */
+.right-column {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Input Groups */
+.input-group {
+  text-align: left;
+  margin-bottom: 1px;
+  width: 100%;
+}
+
+.cash-add-lable {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 1px;
+  color: #000000; /* Light gray for labels */
+  background-color: whitesmoke;
+}
+.dark.cash-add-lable {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 1px;
+  color: #ffffff; /* Light gray for labels */
+  background-color: transparent;
+}
+
+.cash-add-input{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #ffffff;
+  transition: 0.3s;
+  margin-bottom: 5px;
+  margin-top: 1px;
+}
+.cash-add-input.dark{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #858585;
+  color: #ffffff;
+  transition: 0.3s;
+  margin-bottom: 5px;
+  margin-top: 1px;
+}
+
+.cash-add-input[type="email"] {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark text color */
+  border: 1px solid #ccc; /* Light gray border */
+  padding: 8px;
+  border-radius: 5px;
+}
+.dark.cash-add-input[type="email"] {
+  background-color: #272727; /* Light gray background */
+  color: #333; /* Dark text color */
+  border: 1px solid #333; /* Light gray border */
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.cash-add-input select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #292929;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.dark.cash-add-input select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #383838;
+  color: #282828;
+  transition: 0.3s;
+}
+
+.cash-add-input:focus,
+.input-group select:focus {
+  border-color: #00adb5; /* Accent color */
+  outline: none;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cashier-add-submit-btn, .cashier-add-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cashier-add-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.cashier-add-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.cashier-add-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

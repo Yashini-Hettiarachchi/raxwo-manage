@@ -1,0 +1,258 @@
+/* CustomerDetailsTable.css */
+
+/* General Container */
+.customer-details-container {
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  padding-left: 300px; /* Adjust for sidebar width */
+  overflow: auto;
+}
+
+.dark.customer-details-container {
+  background-color: #0F172a;
+  color: white;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.customer-details-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark.customer-details-title {
+  color: #fff;
+}
+
+/* Search Bar Styles */
+.search-bar-container {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: whitesmoke;
+  border: 0px ;
+  border-radius: 8px;
+  padding: 0px 0px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark.search-bar-container {
+  background: transparent;
+  border-color: #4a5568;
+}
+
+.search-bar-container:hover,
+.search-bar-container:focus-within {
+  border-color: #3b82f6;
+}
+
+.product-list-search-bar {
+  flex: 1;
+  padding: 8px 10px 8px 35px;
+  border: none;
+  background: transparent;
+  color: #1f2937;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.dark.product-list-search-bar {
+  color: #e2e8f0;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.dark .search-icon {
+  color: #a0aec0;
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #6b7280;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.dark .search-clear-btn {
+  color: #a0aec0;
+}
+
+.search-clear-btn:hover {
+  color: #1f2937;
+}
+
+.dark .search-clear-btn:hover {
+  color: #e2e8f0;
+}
+
+
+/* Table Styles */
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark.customer-table {
+  background: #1e1e1e;
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .customer-table th,
+.dark .customer-table td {
+  border-bottom: 1px solid #444;
+}
+
+.customer-table th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.dark.customer-table th {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+.customer-table td {
+  color: #374151;
+}
+
+.dark.customer-table td {
+  color: #e2e8f0;
+}
+
+/* Action Container */
+.action-container {
+  position: relative;
+}
+
+.action-dot-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.dark .action-dot-btn {
+  color: #e2e8f0;
+}
+
+/* Action Menu */
+.action-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  min-width: 120px;
+}
+
+.dark .action-menu {
+  background: #2d3748;
+}
+
+/* Delete Button */
+.c-delete-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: #e53e3e;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dark .c-delete-btn {
+  color: #f56565;
+}
+
+.c-delete-btn:hover {
+  background: #f8f9fa;
+}
+
+.dark .c-delete-btn:hover {
+  background: #4a5568;
+}
+
+.action-btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.c-delete-btn-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Error and Loading States */
+.error-message {
+  color: #e53e3e;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.dark .error-message {
+  color: #f56565;
+}
+
+.loading,
+.no-customers {
+  text-align: center;
+  color: #6b7280;
+  margin: 20px 0;
+}
+
+.dark .loading,
+.dark .no-customers {
+  color: #a0aec0;
+}

@@ -1,0 +1,118 @@
+/* Modal Background */
+.m-e-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px); /* Smooth glassmorphism effect */
+  backdrop-filter: blur(5px); /* Smooth glassmorphism effect */
+}
+
+/* Modal Box */
+.dark.m-e-modal-container {
+  background: #0F172A; /* Dark navy background for dark mode */
+  color: #E5E7EB; /* Light gray text for contrast */
+}
+
+.m-e-modal-container {
+  background: whitesmoke; /* Light theme */
+  padding: 25px;
+  width: 550px;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #333; /* Dark text for light theme */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Title */
+.m-e-title {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.dark.m-e-title {
+ color: #E5E7EB; /* Light gray for dark mode */
+  background-color: transparent;
+}
+
+/* Label Styling */
+.dark.me-lable {
+  color: #E5E7EB;
+  
+}
+.me-lable {
+  display: block;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333; /* Dark text for light mode */
+  font-family: 'Inter', sans-serif;
+  text-align:justify;
+  font-weight: 500 ;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+input:focus {
+  border: 2px solid #1abc9c;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #1abc9c;
+}
+
+
+/* Submit and Cancel Buttons */
+.m-e-submit, .m-e-cancel {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.m-e-submit:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.m-e-cancel {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.m-e-cancel:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+}

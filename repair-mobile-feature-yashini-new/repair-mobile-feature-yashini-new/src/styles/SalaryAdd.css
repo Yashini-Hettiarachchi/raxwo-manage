@@ -1,0 +1,261 @@
+/* SalaryAdd.css */
+
+/* Modal Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Container */
+.add-salary-container {
+  background: whitesmoke;
+  padding: 25px;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+  text-align: center;
+  color: black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dark.add-salary-container {
+  background: #0F172A;
+  color: #E5E7EB;
+}
+
+/* Title */
+.salary-modal-title {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.dark.salary-modal-title {
+  color: #E5E7EB;
+  background-color: transparent;
+}
+
+/* Form Section Heading */
+.as-h3 {
+  margin: 1px;
+  padding: 5px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  color: #000000;
+  font-size: 18px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.dark.as-h3 {
+  color: #E5E7EB;
+}
+
+/* Add Salary Form */
+.add-salary-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Row for Two-Column Layout */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-column,
+.right-column {
+  width: 48%;
+}
+
+/* Labels */
+.add-salary-lbl {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.dark.add-salary-lbl {
+  color: #E5E7EB;
+}
+
+/* Input Fields */
+.add-salary-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+.dark.add-salary-input {
+  background-color: #1F2A44;
+  color: #E5E7EB;
+  border-color: #4A5568;
+}
+
+/* Placeholder Color */
+.add-salary-input::placeholder {
+  color: #A0AEC0;
+}
+
+.dark.add-salary-input::placeholder {
+  color: #A0AEC0;
+}
+
+/* Input Focus Effect */
+.add-salary-input:focus {
+  border: 2px solid #1abc9c;
+  box-shadow: 0 0 8px #1abc9c;
+  outline: none;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.salary-add-submit-btn, .salary-add-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Submit Button */
+.a-s-submit-btn {
+  background: #000000;
+  color: #ffffff;
+}
+
+.a-s-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Cancel Button */
+.a-s-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.dark.a-s-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.a-s-cancel-btn:disabled {
+  background: #6c757d;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.a-s-cancel-btn:hover:not(:disabled) {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Success Message */
+.success-message {
+  color: #1abc9c;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Loading Message */
+.loading-message {
+  color: #E5E7EB;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .salary-modal-title {
+    font-size: 18px;
+  }
+
+  .add-salary-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .as-h3 {
+    font-size: 16px;
+  }
+
+  .add-salary-lbl {
+    font-size: 14px;
+  }
+
+  .add-salary-input {
+    font-size: 13px;
+  }
+}

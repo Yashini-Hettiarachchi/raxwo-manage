@@ -1,0 +1,276 @@
+/* Container for the entire add product page */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px); /* Smooth glassmorphism effect */
+  backdrop-filter: blur(5px); /* Smooth glassmorphism effect */
+}
+
+.add-product-container {
+  background: whitesmoke;
+  padding: 25px;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+  text-align: center;
+  color: black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dark.add-product-container {
+  background: #0F172A; /* Dark navy background for dark mode */
+  color: #E5E7EB; /* Light gray text for contrast */
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  background: rgba(251, 251, 251, 0.1);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.dark .form-wrapper {
+  background: rgba(31, 41, 68, 0.5); /* Slightly lighter than #0F172A for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.produ-modal-title {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+}
+
+.dark .produ-modal-title {
+  color: #E5E7EB; /* Light gray for dark mode */
+  background-color: transparent;
+}
+
+/* Form Section Heading */
+.ap-h3 {
+  margin: 1px;
+  padding: 5px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  color: #000000;
+  font-size: 18px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.dark .ap-h3 {
+  color: #E5E7EB; /* Light gray for dark mode */
+}
+
+/* Add Product Form */
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.add-product-lbl {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.dark .add-product-lbl {
+  color: #E5E7EB; /* Light gray for dark mode */
+}
+
+/* Input fields */
+.add-product-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+.dark .add-product-input {
+  background-color: #1F2A44; /* Slightly lighter dark background for inputs */
+  color: #E5E7EB; /* Light gray text */
+  border-color: #4A5568; /* Gray border for dark mode */
+}
+
+/* Placeholder color */
+.add-product-input::placeholder {
+  color: #A0AEC0; /* Gray placeholder for light mode */
+}
+
+.dark .add-product-input::placeholder {
+  color: #A0AEC0; /* Gray placeholder for dark mode */
+}
+
+/* Input focus effect */
+.add-product-input:focus {
+  border: 2px solid #1abc9c;
+  box-shadow: 0 0 8px #1abc9c;
+  outline: none;
+}
+
+/* Error input */
+.error-input {
+  border: 2px solid #e74c3c;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-product-submit-btn, .add-product-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Submit and Cancel buttons */
+.a-p-submit-btn,
+.a-p-cancel-btn {
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 45%;
+}
+
+/* Submit button */
+.a-p-submit-btn {
+  background: linear-gradient(45deg, #1a68bc, #165da0);
+  color: white;
+}
+
+.dark .a-p-submit-btn {
+  background: linear-gradient(45deg, #2B6CB0, #2C5282); /* Slightly adjusted for dark mode */
+}
+
+/* Cancel button */
+.a-p-cancel-btn {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+.dark .a-p-cancel-btn {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+/* Button hover effects */
+.a-p-submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.a-p-cancel-btn:hover {
+  background: #dc3545 !important;
+  color: #fff !important;
+  transform: none;
+}
+
+/* Success message */
+.success-message {
+  color: #1abc9c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Loading message */
+.loading, .loading-message {
+  color: #E5E7EB;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+}
+
+/* Form row for two-column layout */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-column,
+.right-column {
+  width: 48%;
+}

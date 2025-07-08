@@ -1,0 +1,926 @@
+/* Centering the container */
+.stock-update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  padding-left: 300px;
+}
+.dark.stock-update-container {
+  background-color: #0F172A;
+}
+
+/* Form styling */
+.us-form-wrapper {
+  background: whitesmoke;
+  padding: 2rem;
+  border-radius: 0px;
+  align-items: center;
+  max-width: 650px;
+  min-height: 200px;
+  max-height: auto;
+  width: 100%;
+  border: 0.5px solid rgba(27, 22, 22, 0.2);
+}
+.dark.us-form-wrapper {
+  background: rgba(251, 251, 251, 0.1);
+}
+
+/* Title */
+h2 {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #000000; /* Black for light mode */
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+.dark h2 {
+  color: #ffffff; /* White for dark mode */
+}
+
+/* Input fields */
+.su-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Black border for light mode */
+  background-color: rgba(0, 0, 0, 0.05); /* Slight background for light mode */
+  color: #000000; /* Black text for light mode */
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+.dark.su-input {
+  border: 1px solid rgba(255, 255, 255, 0.3); /* White border for dark mode */
+  background-color: transparent;
+  color: #fff; /* White text for dark mode */
+}
+
+.stock-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Black border for light mode */
+  background-color: rgba(0, 0, 0, 0.05); /* Slight background for light mode */
+  color: #000000; /* Black text for light mode */
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+.dark.stock-input {
+  border: 1px solid rgba(255, 255, 255, 0.3); /* White border for dark mode */
+  background-color: transparent;
+  color: #fff; /* White text for dark mode */
+}
+
+input:focus {
+  outline: none;
+  border-color: #1abc9c;
+}
+
+.stock-input:focus {
+  outline: none;
+  border-color: #1abc9c;
+}
+
+/* Search section */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+.dark.search-section {
+  background-color: transparent;
+}
+
+/* Update form */
+.update-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.up-p {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #000000; /* Black for light mode */
+  background: rgba(0, 0, 0, 0.1); /* Light background for light mode */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Black border for light mode */
+}
+.dark.up-p {
+  color: #fff; /* White for dark mode */
+  background: rgba(255, 255, 255, 0.1); /* Dark background for dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* White border for dark mode */
+}
+
+.update-form-label {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #000000; /* Black for light mode */
+  margin-bottom: -5px;
+  margin-top: 5px;
+  background-color: transparent;
+}
+.dark.update-form-label {
+  color: #fff; /* White for dark mode */
+  background-color: transparent;
+}
+
+.update-form input {
+  background: rgba(0, 0, 0, 0.2); /* Light background for light mode */
+  color: #000000; /* Black text for light mode */
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Black border for light mode */
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 1px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+.dark .update-form input {
+  background: rgba(255, 255, 255, 0.2); /* Dark background for dark mode */
+  color: #fff; /* White text for dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* White border for dark mode */
+}
+
+.update-form input:focus {
+  border-color: #1abc9c;
+}
+
+/* Buttons */
+button {
+  background: #000 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  padding: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Cancel buttons remain red */
+.cancel-btn, .cancel-button {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+.cancel-btn:hover, .cancel-button:hover {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+.update-btn {
+  background: #000000;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 10px;
+}
+.dark .update-btn {
+   background: #000000;
+   color: #ffffff;
+}
+
+.search-section button {
+  background: #000000;
+  color: #ffffff;
+  flex: 1;
+}
+.dark .search-section button {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Success & error messages */
+.success-message {
+  color: #1abc9c;
+  text-align: center;
+}
+
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .stock-update-container {
+    padding: 10px;
+    padding-left: 10px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .us-form-wrapper {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark.us-form-wrapper {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+  .search-section {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-section input {
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .search-section button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .update-form {
+    gap: 15px;
+  }
+
+  .up-p {
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .update-form-label {
+    font-size: 0.9rem;
+    margin-bottom: -3px;
+    font-weight: 600;
+  }
+
+  .update-form input,
+  .stock-input {
+    padding: 12px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .stock-info-section {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+  }
+
+  .stock-info-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .stock-display-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stock-display-item {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .stock-display-item {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .stock-label {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .stock-value {
+    font-size: 1.3rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    min-width: 80px;
+  }
+
+  .update-btn {
+    padding: 15px;
+    font-size: 1rem;
+    transform: none;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  .update-btn:hover {
+    transform: none;
+  }
+
+  .update-btn:active {
+    transform: scale(0.98);
+  }
+
+  .success-message,
+  .error-message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  /* Mobile-specific touch improvements */
+  button {
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input {
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Better focus states for mobile */
+  input:focus,
+  button:focus {
+    outline: 2px solid #1abc9c;
+    outline-offset: 2px;
+  }
+
+  /* Improve scrolling */
+  .stock-update-container {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+
+  /* Better visual hierarchy */
+  .stock-display-item {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .stock-display-item:active {
+    transform: scale(0.98);
+  }
+
+  /* Enhanced button states */
+  .update-btn {
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .update-btn:active {
+    transform: scale(0.96);
+  }
+
+  /* Loading state improvements */
+  .update-btn:disabled {
+    opacity: 0.6;
+    transform: none;
+  }
+
+  /* Better form spacing */
+  .update-form > * {
+    margin-bottom: 8px;
+  }
+
+  .update-form > *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Improved search section */
+  .search-section {
+    position: relative;
+  }
+
+  .search-section input:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 0 2px rgba(26, 188, 156, 0.2);
+  }
+
+  /* Better message styling */
+  .success-message,
+  .error-message {
+    position: relative;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-update-container {
+    padding: 5px;
+    padding-left: 5px;
+    min-height: 100vh;
+  }
+
+  .us-form-wrapper {
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .search-section {
+    gap: 8px;
+    margin-bottom: 1.2rem;
+  }
+
+  .search-section input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .search-section button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .update-form {
+    gap: 12px;
+  }
+
+  .up-p {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .update-form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .update-form input,
+  .stock-input {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .stock-info-section {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .stock-info-title {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .stock-display-row {
+    gap: 12px;
+  }
+
+  .stock-display-item {
+    padding: 8px;
+  }
+
+  .stock-label {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .stock-value {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+    min-width: 70px;
+  }
+
+  .update-btn {
+    padding: 12px;
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* Reduce animations for better performance */
+  .stock-display-item:active {
+    transform: none;
+  }
+
+  .update-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Better text sizing */
+  .stock-label {
+    line-height: 1.2;
+  }
+
+  .stock-value {
+    line-height: 1.3;
+  }
+
+  /* Improved spacing */
+  .stock-info-section {
+    margin: 10px 0;
+  }
+
+  .stock-display-row {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .stock-update-container {
+    padding: 2px;
+  }
+
+  .us-form-wrapper {
+    padding: 1rem;
+    margin: 2px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .search-section {
+    margin-bottom: 1rem;
+  }
+
+  .search-section input {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .search-section button {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .update-form {
+    gap: 10px;
+  }
+
+  .update-form input,
+  .stock-input {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .stock-info-section {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .stock-display-item {
+    padding: 6px;
+  }
+
+  .stock-value {
+    font-size: 1rem;
+    padding: 5px 8px;
+    min-width: 60px;
+  }
+
+  .update-btn {
+    padding: 10px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+
+  /* Minimal animations */
+  .stock-display-item:active,
+  .update-btn:active {
+    transform: none;
+  }
+
+  /* Compact layout */
+  .us-form-wrapper {
+    padding: 0.8rem;
+  }
+
+  .stock-info-section {
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  .stock-display-item {
+    padding: 4px;
+  }
+
+  /* Better text readability */
+  .stock-label {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+
+  .stock-value {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .stock-update-container {
+    padding: 5px;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
+  .us-form-wrapper {
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  .stock-display-row {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .stock-display-item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Compact form in landscape */
+  .update-form {
+    gap: 8px;
+  }
+
+  .up-p {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .update-form-label {
+    font-size: 0.8rem;
+    margin-bottom: -2px;
+  }
+
+  .update-form input,
+  .stock-input {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .stock-info-section {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .stock-info-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .stock-display-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .stock-display-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .stock-label {
+    display: block;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    color: #666666;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  .stock-value {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 5px;
+  }
+
+  .old-stock {
+    background: rgba(255, 193, 7, 0.2);
+    color: #856404;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+  }
+
+  .dark.old-stock {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+  }
+
+  .current-stock {
+    background: rgba(40, 167, 69, 0.2);
+    color: #155724;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+  }
+
+  .dark.current-stock {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+  }
+}
+
+/* Tablet specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .stock-update-container {
+    padding: 15px;
+    padding-left: 200px;
+  }
+
+  .us-form-wrapper {
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  .stock-display-row {
+    gap: 15px;
+  }
+
+  .stock-value {
+    font-size: 1.4rem;
+  }
+}
+
+/* Stock Information Section Styles */
+.stock-info-section {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.dark.stock-info-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stock-info-title {
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  margin: 0 0 15px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.dark.stock-info-title {
+  color: #ffffff;
+}
+
+.stock-display-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.stock-display-item {
+  flex: 1;
+  text-align: center;
+}
+
+.stock-label {
+  display: block;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: #666666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.dark.stock-label {
+  color: #cccccc;
+}
+
+.stock-value {
+  display: block;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.old-stock {
+  background: rgba(255, 193, 7, 0.2);
+  color: #856404;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.dark.old-stock {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.current-stock {
+  background: rgba(40, 167, 69, 0.2);
+  color: #155724;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.dark.current-stock {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+/* Responsive design for stock display */
+@media (max-width: 768px) {
+  .stock-display-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .stock-value {
+    font-size: 1.3rem;
+  }
+
+  .stock-display-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-display-row {
+    gap: 12px;
+  }
+  
+  .stock-value {
+    font-size: 1.1rem;
+    padding: 5px 8px;
+  }
+
+  .stock-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .stock-display-row {
+    gap: 10px;
+  }
+  
+  .stock-value {
+    font-size: 1rem;
+    padding: 4px 6px;
+  }
+
+  .stock-label {
+    font-size: 0.7rem;
+  }
+}

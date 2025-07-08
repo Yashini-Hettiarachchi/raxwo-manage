@@ -1,0 +1,170 @@
+/* Container for the attendance form */
+.attendance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  padding-left: 300px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .attendance-container {
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .dark.attendance-container {
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .form-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .dark.form-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.dark.attendance-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0F172A;
+  padding: 20px;
+  padding-left: 300px;
+}
+
+.form-wrapper {
+  background: rgba(185, 185, 185, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+.dark.form-wrapper {
+  background: rgba(251, 251, 251, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+/* Heading styling */
+h2 {
+  font-size: 24px;
+  color: #00bfff;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #292929;
+  color: #ffffff;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  border-color: #00adb5; /* Accent color */
+  outline: none;
+}
+
+/* Cashier information box */
+.cashier-info {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cashier-info:hover {
+  transform: translateY(-5px);
+}
+
+.cashier-info p {
+  margin: 10px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cashier-info p strong {
+  font-weight: 700;
+  color: #ffeb3b; /* Highlighted text color */
+}
+
+.input-ca-lbl{
+  background-color: transparent;
+  color: black;
+}
+.dark.input-ca-lbl{
+  background-color: transparent;
+  color: white;
+  
+}
+
+/* Button styling */
+.mark-btn {
+  padding: 12px 20px;
+  background: #008cff;; /* Default button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.mark-btn:hover {
+  background: #008cffa5; /* Hover color */
+}
+
+/* Message styling */
+.message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2ecc71; /* Success message color */
+  font-size: 14px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

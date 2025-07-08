@@ -1,0 +1,162 @@
+/* SalaryEdit.css */
+
+/* Modal Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.salary-add-modal-container {
+  background: whitesmoke;
+  padding: 25px;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+  text-align: center;
+  color: black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dark.salary-add-modal-container {
+  background: #0F172A;
+  color: #E5E7EB;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.dark.modal-title {
+  color: #E5E7EB;
+  background-color: transparent;
+}
+
+/* Error Message */
+.error-message {
+  font-size: 14px;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+/* Form Styling */
+.add-salary-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Left and Right Columns */
+.left-column, .right-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Labels */
+.salary-add-label {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.dark.salary-add-label {
+  color: #E5E7EB;
+}
+
+/* Inputs */
+.salary-add-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.dark.salary-add-input {
+  border: 1px solid #333;
+  background-color: #858585;
+  color: #ffffff;
+}
+
+.salary-add-input:focus {
+  border-color: #00adb5;
+  outline: none;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.salary-edit-submit-btn, .salary-edit-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salary-add-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.salary-add-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.salary-add-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,979 @@
+/* General Container */
+.product-list-container {
+  padding: 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  margin: auto;
+  background-color: whitesmoke;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding-left: 300px;
+  overflow: auto;
+}
+
+.dark.product-list-container {
+  background-color: #0F172A;
+}
+
+.protit {
+  margin-right: 10px;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.product-list-title {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dark.product-list-title {
+  color: #fff;
+}
+
+/* Summary Button */
+.c-summary-btn {
+  background-color: #1e90ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: background 0.3s ease;
+  margin-left: auto;
+}
+
+.dark.c-summary-btn {
+  background-color: #63b3ed;
+}
+
+.c-summary-btn:hover {
+  background-color: #2b6cb0;
+}
+
+/* Search and Action Container */
+.search-action-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Search Bar Styles */
+.search-bar-container {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: whitesmoke;
+  border: 0px;
+  border-radius: 8px;
+  padding: 0px 0px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark.search-bar-container {
+  background: transparent;
+  border-color: #4a5568;
+}
+
+.search-bar-container:hover,
+.search-bar-container:focus-within {
+  border-color: #3b82f6;
+}
+
+.product-list-search-bar {
+  flex: 1;
+  padding: 8px 10px 8px 35px;
+  border: none;
+  background: transparent;
+  color: #1f2937;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.dark.product-list-search-bar {
+  color: #e2e8f0;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.dark .search-icon {
+  color: #a0aec0;
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #6b7280;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.dark .search-clear-btn {
+  color: #a0aec0;
+}
+
+.search-clear-btn:hover {
+  color: #1f2937;
+}
+
+.dark .search-clear-btn:hover {
+  color: #e2e8f0;
+}
+
+/* Refresh Button */
+
+
+/* Reports Button */
+.c-atten-list-reports-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 1px 1px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  height: 38px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  margin-left: 0px;
+}
+
+.dark.c-atten-list-reports-btn {
+  background-color: #c82333;
+}
+
+.c-atten-list-reports-btn:hover {
+  background-color: #c82333;
+}
+
+/* Report Modal Overlay */
+.report-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Report Modal Content */
+.report-modal-content {
+  background: whitesmoke;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.report-modal-content.dark {
+  background: #1a202c;
+}
+
+/* Report Modal Header */
+.report-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Report Modal Title */
+.report-modal-title {
+  font-size: 1.5rem;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.report-modal-content.dark .report-modal-title {
+  color: #ffffff;
+}
+
+/* Report Modal Close Icon */
+.report-modal-close-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sark.c-att-modal-close-icon{
+  background-color: transparent;
+}
+.report-modal-content.dark .report-modal-close-icon {
+  color: #e2e8f0;
+  background-color: transparent;
+}
+
+.report-modal-close-icon:hover {
+  color: #e53e3e;
+}
+
+/* Report Modal Buttons */
+.report-modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.product-list-excel-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 1px 1px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  height: 38px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  margin-left: 0px;
+}
+
+.dark.product-list-excel-btn {
+  background-color: #34d058;
+}
+
+.product-list-excel-btn:hover {
+  background-color: #21923b;
+}
+
+.product-list-pdf-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 1px 1px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  height: 38px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  margin-left: 0px;
+}
+
+.dark.product-list-pdf-btn {
+  background-color: #34d058;
+}
+
+.product-list-pdf-btn:hover {
+  background-color: #21923b;
+}
+
+.attend-lbl{
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.dark.attend-lbl{
+  color: #E5E7EB; 
+}
+
+/* Table Styling */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark.product-table {
+  background: #1a202c;
+  border-color: #2d3748;
+}
+
+.product-table th {
+  background: #f5f5f5;
+  padding: 12px 16px;
+  color: #333;
+  text-align: left;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.dark.product-table th {
+  background: #2d3748;
+  color: #e2e8f0;
+  border-bottom-color: #4a5568;
+}
+
+.product-table td {
+  padding: 12px 16px;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.dark.product-table td {
+  color: #e2e8f0;
+  border-bottom-color: #4a5568;
+}
+
+.product-table tr:hover {
+  background: #f0f0f0;
+}
+
+.dark.product-table tr:hover {
+  background: #2d3748;
+}
+
+/* Action Container and Menu */
+.action-container {
+  position: relative;
+}
+
+.action-dot-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  color: #666;
+}
+
+.dark .action-dot-btn {
+  color: #a0aec0;
+}
+
+.action-dot-btn:hover {
+  color: #000;
+}
+
+.dark .action-dot-btn:hover {
+  color: #e2e8f0;
+}
+
+.action-menu {
+  position: absolute;
+  align-items: start;
+  right: 0;
+  top: 100%;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.dark .action-menu {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.action-menu button {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  height: 40px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.action-menu button:hover {
+  background: #f0f0f0;
+}
+
+.dark .action-menu button:hover {
+  background: #4a5568;
+}
+
+/* Action Buttons */
+.p-edit-btn,
+.p-delete-btn {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background: none;
+  transition: transform 0.2s ease;
+}
+
+.dark.p-edit-btn,
+.dark.p-delete-btn {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background: none;
+}
+
+.p-edit-btn:hover,
+.p-delete-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.action-btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 4px 8px;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.dark .action-btn-content {
+  color: #e2e8f0;
+}
+
+.p-edit-btn-icon,
+.p-delete-btn-icon,
+.p-bill-btn-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.p-view-btn-icon,
+.p-job-bill-btn-icon,
+.p-select-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Loading and No Records */
+.loading,
+.no-products {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+.dark .loading,
+.dark .no-products {
+  color: #e2e8f0;
+}
+
+/* Modal Overlay */
+.c-att-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px); /* Smooth glassmorphism effect */
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Container */
+.c-att-modal-container {
+  background: whitesmoke;
+  padding: 25px;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 0px;
+  text-align: center;
+  color: black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dark.c-att-modal-container {
+  background: #0F172A; /* Dark navy background for dark mode */
+  color: #E5E7EB; 
+}
+
+/* Modal Header */
+.c-att-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Modal Title */
+.c-att-modal-title {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.dark .c-att-modal-title {
+  color: #E5E7EB; /* Light gray for dark mode */
+  background-color: transparent;
+}
+
+/* Modal Close Icon */
+.c-att-modal-close-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dark .c-att-modal-close-icon {
+  color: #e2e8f0;
+}
+
+.c-att-modal-close-icon:hover {
+  color: #e53e3e;
+}
+
+/* Modal Content */
+.c-att-modal-content {
+  margin-bottom: 20px;
+}
+
+.c-att-modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Inter', sans-serif;
+  color: #4a5568;
+}
+
+.dark .c-att-modal-content label {
+  color: #e2e8f0;
+}
+
+.c-att-modal-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark .c-att-modal-input {
+  background-color: #2d3748;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+/* Modal Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-save-btn {
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 50%;
+  background: linear-gradient(45deg, #1a68bc, #165da0);
+  color: white;
+}
+
+.modal-save-btn:hover {
+  background-color: #2b6cb0;
+  transform: scale(1.05);
+}
+
+.modal-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+
+
+/* Product Summary Modal Overlay */
+.att-product-summary-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Same for both modes, provides dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Product Summary Modal Content */
+.att-product-summary-modal-content {
+  background: #f7fafc; /* Light mode: Soft off-white for a clean look */
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Softer shadow for light mode */
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Dark Mode for Modal Content */
+.att-product-summary-modal-content.dark {
+  background: #1a202c; /* Dark mode: Dark gray-blue for a sleek look */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+}
+
+/* Custom Scrollbar for Modal Content */
+.att-product-summary-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.att-product-summary-modal-content::-webkit-scrollbar-track {
+  background: #e2e8f0; /* Light mode: Light gray track */
+  border-radius: 0px;
+}
+
+.att-product-summary-modal-content::-webkit-scrollbar-thumb {
+  background: #a0aec0; /* Light mode: Neutral gray thumb */
+  border-radius: 0px;
+}
+
+.att-product-summary-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #718096; /* Light mode: Darker gray on hover */
+}
+
+/* Dark Mode Scrollbar */
+.att-product-summary-modal-content.dark::-webkit-scrollbar-track {
+  background: #2d3748; /* Dark mode: Darker track */
+}
+
+.att-product-summary-modal-content.dark::-webkit-scrollbar-thumb {
+  background: #63b3ed; /* Dark mode: Soft blue thumb */
+}
+
+.att-product-summary-modal-content.dark::-webkit-scrollbar-thumb:hover {
+  background: #4299e1; /* Dark mode: Brighter blue on hover */
+}
+
+/* Product Summary Modal Header */
+.product-summary-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Product Summary Modal Title */
+.product-summary-modal-title {
+  font-size: 1.8rem;
+  color: #1a202c; /* Light mode: Dark gray for contrast */
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.att-product-summary-modal-content.dark .product-summary-modal-title {
+  color: #e2e8f0; /* Dark mode: Light gray for readability */
+}
+
+/* Product Summary Modal Close Icon */
+.product-summary-modal-close-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #718096; /* Light mode: Neutral gray */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.att-product-summary-modal-content.dark .product-summary-modal-close-icon {
+  color: #a0aec0; /* Dark mode: Lighter gray */
+}
+
+.product-summary-modal-close-icon:hover {
+  color: #e53e3e; /* Same for both modes: Red for emphasis */
+}
+
+/* Product Summary Content */
+.product-summary-content {
+  margin-bottom: 30px;
+}
+
+/* Month Selector */
+.attendance-summary-month-selector {
+  margin-bottom: 20px;
+}
+
+.attendance-summary-month-selector label {
+  font-size: 1.2rem;
+  color: #4a5568; /* Light mode: Medium gray for readability */
+  font-family: "Inter", sans-serif;
+  margin-right: 10px;
+}
+
+.att-product-summary-modal-content.dark .attendance-summary-month-selector label {
+  color: #a0aec0; /* Dark mode: Lighter gray for contrast */
+}
+
+.month-selector {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #e2e8f0; /* Light mode: Light gray border */
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff; /* Light mode: White background */
+  color: #1a202c; /* Light mode: Dark text */
+}
+
+.month-selector.dark {
+  background-color: #2d3748; /* Dark mode: Dark gray background */
+  color: #e2e8f0; /* Dark mode: Light text */
+  border: 1px solid #4a5568; /* Dark mode: Darker border */
+}
+
+/* Product Summary Chart Container */
+.product-summary-chart-container {
+  background: #ffffff; /* Light mode: White background */
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.att-product-summary-modal-content.dark .product-summary-chart-container {
+  background: #2d3748; /* Dark mode: Dark gray background */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-summary-chart-container:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+/* Fade-in and Slide-in Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-table th,
+  .product-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list-container {
+    padding-left: 20px;
+  }
+  .product-table {
+    min-width: 700px;
+  }
+  .search-action-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-bar-container {
+    max-width: 100%;
+  }
+  .product-list-search-bar {
+    width: 100%;
+  }
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .product-summary-modal-content {
+    padding: 20px;
+    width: 90%;
+  }
+  .report-modal-content {
+    width: 80%;
+  }
+  .attendance-summary-month-selector label {
+    font-size: 1rem;
+  }
+  .month-selector {
+    width: 100%;
+  }
+  .modal-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list-title {
+    font-size: 1.8rem;
+  }
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .search-action-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-summary-modal-title {
+    font-size: 1.5rem;
+  }
+  .report-modal-title {
+    font-size: 1.3rem;
+  }
+  .report-modal-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .report-modal-buttons button {
+    width: 100%;
+  }
+  .modal-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* --- Standardized Report Modal Buttons --- */
+.btn-report-e {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  min-width: 120px;
+  height: 38px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-report-e:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.btn-report-p {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  min-width: 120px;
+  height: 38px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-report-p:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.dark .btn-report-e {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.dark .btn-report-p {
+  background-color: #000 !important;
+  color: #fff !important;
+}

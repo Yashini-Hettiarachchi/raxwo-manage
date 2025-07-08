@@ -1,0 +1,214 @@
+/* Modal Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px); /* Smooth glassmorphism effect for Safari */
+  backdrop-filter: blur(5px); /* Smooth glassmorphism effect */
+}
+
+/* Modal Box */
+.user-edi-modal-container {
+  background: whitesmoke; /* Light theme */
+  padding: 25px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #333; /* Dark text for light theme */
+}
+
+.dark .user-edi-modal-container {
+  background: #0F172A; /* Dark navy background for dark mode */
+  color: #E5E7EB; /* Light gray text for contrast */
+}
+
+/* Modal Title */
+.ue-modal-title {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 15px;
+  color: #000000; /* Cyan highlight */
+}
+
+.dark .ue-modal-title {
+  color: #ffffff; /* Keep cyan for consistency, good contrast with #0F172A */
+}
+
+/* Input Groups */
+.ue-input-group {
+  text-align: left;
+  margin-bottom: 15px;
+  background: transparent; /* No background needed for container */
+}
+
+.dark .ue-input-group {
+  background: transparent; /* No background needed for container */
+}
+
+.ue-input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333; /* Dark text for light mode */
+  font-family: 'Inter', sans-serif;
+}
+
+.dark .ue-input-group label {
+  color: #E5E7EB; /* Light gray for dark mode */
+}
+
+/* Input and Select Fields */
+.ue-input-group input,
+.ue-input-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #ffffff; /* Uniform white background for light mode */
+  color: #333; /* Dark text for light mode */
+  transition: border-color 0.3s;
+}
+
+.dark .ue-input-group input,
+.dark .ue-input-group select {
+  border: 1px solid #4A5568; /* Gray border for dark mode */
+  background: #1F2A44; /* Uniform dark background for dark mode */
+  color: #E5E7EB; /* Light gray text */
+}
+
+/* Select Dropdown Styling */
+.ue-input-group select {
+  appearance: none;
+  padding-right: 30px; /* Space for custom arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.dark .ue-input-group select {
+}
+
+/* Placeholder Styling */
+.ue-input-group input::placeholder {
+  color: #A0AEC0; /* Gray placeholder for light mode */
+}
+
+.dark .ue-input-group input::placeholder {
+  color: #A0AEC0; /* Gray placeholder for dark mode */
+}
+
+/* Input and Select Focus Effect */
+.ue-input-group input:focus,
+.ue-input-group select:focus {
+  border-color: #00adb5; /* Accent color */
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #00adb5;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-user-submit-btn, .edit-user-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eu-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.eu-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.dark .eu-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.eu-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.success-message {
+  color: #1abc9c;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Smooth Animation */
+.user-edi-modal-container {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .user-edi-modal-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .eu-save-btn,
+  .eu-cancel-btn {
+    padding: 10px 30px;
+  }
+}

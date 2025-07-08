@@ -1,0 +1,221 @@
+/* Overlay */
+.barcode-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.barcode-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out;
+}
+
+.barcode-modal-content.dark {
+  background: #2d3748;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+.barcode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.barcode-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2d3748;
+}
+
+.barcode-modal-content.dark .barcode-header h3 {
+  color: #e2e8f0;
+}
+
+.barcode-close-btn {
+  background: #dc3545 !important;
+  color: #fff !important;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #718096;
+}
+
+.barcode-modal-content.dark .barcode-close-btn {
+  color: #a0aec0;
+}
+
+.barcode-close-btn:hover {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+.barcode-modal-content.dark .barcode-close-btn:hover {
+  color: #e2e8f0;
+}
+
+/* Barcode Container */
+.barcode-container {
+  text-align: center;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.barcode-modal-content.dark .barcode-container {
+  background: #1a202c;
+}
+
+.shop-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+.barcode-modal-content.dark .shop-name {
+  color: #e2e8f0;
+}
+
+.barcode-details {
+  margin-top: 10px;
+}
+
+.barcode-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.barcode-modal-content.dark .barcode-details p {
+  color: #e2e8f0;
+}
+
+/* Quantity Input */
+.barcode-quantity {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barcode-quantity label {
+  font-size: 14px;
+  color: #2d3748;
+  margin-right: 10px;
+}
+
+.barcode-modal-content.dark .barcode-quantity label {
+  color: #e2e8f0;
+}
+
+.barcode-quantity input {
+  width: 150px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #2d3748;
+}
+
+.barcode-quantity input.dark {
+  background: #4a5568;
+  color: #e2e8f0;
+  border-color: #718096;
+}
+
+.barcode-quantity input:focus {
+  outline: none;
+  border-color: #2fa1ff;
+}
+
+/* Actions */
+.barcode-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.barcode-download-btn {
+  flex: 1;
+  padding: 8px;
+  background: #2fa1ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.barcode-download-btn:hover {
+  background: #2b8adb;
+  transform: translateY(-2px);
+}
+
+.barcode-download-btn.dark {
+  background: #63b3ed;
+}
+
+.barcode-download-btn.dark:hover {
+  background: #4299e1;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .barcode-modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .barcode-header h3 {
+    font-size: 14px;
+  }
+
+  .shop-name {
+    font-size: 14px;
+  }
+
+  .barcode-details p {
+    font-size: 12px;
+  }
+
+  .barcode-quantity label {
+    font-size: 12px;
+  }
+
+  .barcode-quantity input {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .barcode-download-btn {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

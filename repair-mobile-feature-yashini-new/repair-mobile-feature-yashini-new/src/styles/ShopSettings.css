@@ -1,0 +1,169 @@
+/* Popup container */
+
+/* Popup content */
+.sh-popup-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 0px;
+  width: 700px;
+  height: auto;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+  margin-left: 200px;
+}
+
+.sh-popup-content.dark-mode {
+  background: #333333;
+  color: #ffffff;
+}
+
+/* Title */
+.sh-pop-title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sh-pop-title.dark-mode {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+/* Label */
+.sh-p-lbl {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.sh-p-lbl.dark-mode {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+input.dark-mode {
+  background: #444444;
+  color: #ffffff;
+  border-color: #666666;
+}
+
+input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+}
+
+input.dark-mode:focus {
+  border-color: #1a8753;
+  box-shadow: 0 0 5px rgba(26, 135, 83, 0.3);
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.shop-settings-submit-btn, .shop-settings-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.p-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.p-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.p-cancel-btn.dark-mode {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.p-cancel-btn.dark-mode:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sh-popup-content {
+    margin-left: 0;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sh-popup-content {
+    width: 95%;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .pop-title {
+    font-size: 20px;
+  }
+
+  .p-lbl {
+    font-size: 13px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  .p-con-btn,
+  .p-cancel-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

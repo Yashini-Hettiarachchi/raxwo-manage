@@ -1,0 +1,678 @@
+/* Container for the supplier list page */
+.supplier-list-container {
+  padding: 2rem;
+  width: 100%;
+  min-width: auto;
+  min-height: 100vh;
+  margin: auto;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding-left: 300px;
+  overflow: auto;
+}
+
+.supplier-list-container.dark {
+  background-color: #0F172A;
+}
+
+.suptit {
+  margin-right: 10px;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.supplier-title {
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.supplier-title.dark {
+  color: #ffffff;
+}
+
+/* Summary Button */
+.summary-btn {
+  background-color: #1e90ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  transition: background 0.3s ease;
+}
+
+.dark.summary-btn {
+  background-color: #63b3ed;
+}
+
+.summary-btn:hover {
+  background-color: #2b6cb0;
+}
+
+/* Action buttons container */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* .actions.dark {
+  /* No additional styles needed for dark mode */
+*/
+
+
+
+/* Search bar */
+.sup-search-bar {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 1px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.sup-search-bar.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.sup-search-bar:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Refresh button */
+.sup-refresh-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  
+  border-radius: 5px;
+}
+
+.sup-refresh-btn.dark {
+  background-color: transparent;
+  
+}
+
+.sup-refresh-btn:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+}
+
+/* Generate buttons container */
+.generate-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.sup-add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 1px 1px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  height: 38px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+.dark.sup-add-btn {
+  background-color: #28a745;
+}
+
+.sup-add-btn:hover {
+  background-color: #1f963b;
+}
+
+/* PDF and Excel buttons */
+.sup-generate-pdf-btn {
+  background: #000 !important;
+  color: #fff !important;
+  border: none;
+  padding: 10px 1px;
+  margin-top: 8px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.sup-generate-pdf-btn.dark {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.sup-generate-excel-btn {
+  background: #000 !important;
+  color: #fff !important;
+  border: none;
+  padding: 10px 1px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.sup-generate-excel-btn.dark {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.sup-generate-pdf-btn:hover,
+.sup-generate-excel-btn:hover {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Table styles */
+.supplier-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: whitesmoke;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.supplier-table.dark {
+  background: rgba(251, 251, 251, 0.1);
+}
+
+/* Table headers */
+.supplier-table th {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  width: auto;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+.dark.supplier-table th {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Table rows */
+.supplier-table td {
+  padding: 10px;
+  width: auto;
+  color: black;
+  border-bottom: 1px solid rgba(82, 82, 82, 0.2);
+  font-family: "Inter", sans-serif;
+  font-weight: 525;
+  font-size: 15px;
+}
+
+.dark.supplier-table td {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Alternate row color */
+.supplier-table tr:nth-child(even) {
+  background: rgba(153, 153, 153, 0.177);
+}
+
+.dark.supplier-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Edit and Delete buttons */
+.edit-btn {
+  padding: 8px 1px;
+  margin-left: 1px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  background: none;
+  color: white;
+}
+
+.delete-btn {
+  padding: 8px 1px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  margin-right: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  background: none;
+  color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+
+/* No suppliers message */
+.no-suppliers {
+  color: #4a5568;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin-top: 20px;
+}
+
+.dark .no-suppliers {
+  color: #e2e8f0;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Loading message */
+.loading {
+  color: #4a5568;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin-top: 10px;
+}
+
+.dark .loading {
+  color: #e2e8f0;
+}
+
+/* Modal Overlay */
+.supplier-summary-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Fixed height to cover the entire viewport */
+ 
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.supplier-summary-modal-content {
+  background: whitesmoke;
+  border-radius: 12px;
+  padding: 30px;
+  width: 800px;
+  max-width: 90%;
+  max-height: 100vh; /* Limit the height to 80% of the viewport height */
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Custom Scrollbar for Modal Content */
+.supplier-summary-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.supplier-summary-modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.supplier-summary-modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.supplier-summary-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark Mode Scrollbar */
+.supplier-summary-modal-content.dark::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.supplier-summary-modal-content.dark::-webkit-scrollbar-thumb {
+  background: #63b3ed;
+}
+
+.supplier-summary-modal-content.dark::-webkit-scrollbar-thumb:hover {
+  background: #4299e1;
+}
+
+.supplier-summary-modal-content.dark {
+  background: #1a202c;
+}
+
+/* Supplier Summary Modal Header */
+.supplier-summary-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Supplier Summary Modal Title */
+.supplier-summary-modal-title {
+  font-size: 1.8rem;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-modal-title {
+  color: #ffffff;
+}
+
+/* Supplier Summary Modal Close Icon */
+.supplier-summary-modal-close-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-modal-close-icon {
+  color: #e2e8f0;
+}
+
+.supplier-summary-modal-close-icon:hover {
+  color: #e53e3e;
+}
+
+/* Supplier Summary Content */
+.supplier-summary-content {
+  margin-bottom: 30px;
+}
+
+/* Supplier Summary Card */
+.supplier-summary-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-card {
+  background: #2d3748;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.supplier-summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Supplier Summary Icon */
+.supplier-summary-icon {
+  font-size: 2.5rem;
+}
+
+.supplier-summary-total-icon {
+  color: #ff4040;
+}
+
+/* Supplier Summary Text */
+.supplier-summary-text h4 {
+  font-size: 1.2rem;
+  color: #4a5568;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5px;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-text h4 {
+  color: #e2e8f0;
+}
+
+.supplier-summary-text p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-family: "Inter", sans-serif;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-text p {
+  color: #ffffff;
+}
+
+/* Supplier Summary Monthly Summary */
+.supplier-summary-monthly-summary {
+  margin-bottom: 30px;
+}
+
+.supplier-summary-monthly-title {
+  font-size: 1.4rem;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-monthly-title {
+  color: #ffffff;
+}
+
+.supplier-summary-monthly-list {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Custom Scrollbar for Monthly List */
+.supplier-summary-monthly-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.supplier-summary-monthly-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.supplier-summary-monthly-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.supplier-summary-monthly-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark Mode Scrollbar for Monthly List */
+.supplier-summary-modal-content.dark .supplier-summary-monthly-list::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-monthly-list::-webkit-scrollbar-thumb {
+  background: #63b3ed;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-monthly-list::-webkit-scrollbar-thumb:hover {
+  background: #4299e1;
+}
+
+.supplier-summary-monthly-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-monthly-item {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+/* Supplier Summary Chart Container */
+.supplier-summary-chart-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.supplier-summary-modal-content.dark .supplier-summary-chart-container {
+  background: #2d3748;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.supplier-summary-chart-container:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .supplier-list-container {
+    padding-left: 20px;
+  }
+
+  .supplier-table {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .sup-search-bar {
+    width: 100%;
+  }
+
+  .sup-refresh-btn {
+    margin-right: 0;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .summary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .supplier-summary-modal-content {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .supplier-summary-monthly-list {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .supplier-title {
+    font-size: 1.8rem;
+  }
+
+  .supplier-table th,
+  .supplier-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .supplier-summary-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .supplier-summary-text h4 {
+    font-size: 1rem;
+  }
+
+  .supplier-summary-text p {
+    font-size: 1.2rem;
+  }
+
+  .supplier-summary-monthly-title {
+    font-size: 1.2rem;
+  }
+
+  .supplier-summary-monthly-item {
+    font-size: 0.9rem;
+  }
+}

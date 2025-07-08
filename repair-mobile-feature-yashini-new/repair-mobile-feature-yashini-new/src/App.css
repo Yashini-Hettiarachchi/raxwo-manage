@@ -1,0 +1,160 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html elements can scroll */
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+:root {
+  --background-color: white;
+  --text-color: black;
+  --button-background: #007bff;
+  --button-text: white;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  transition: background 0.3s;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+/* Sidebar Menu and Other Styles */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* App Container */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16a085;
+  border-radius: 10px;
+}
+
+/* Content Section */
+.content {
+  margin-top: 0px; /* Adjust this based on navbar height */
+  padding: 0px;
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* Ensures it fills remaining space */
+  margin-left: 250px; /* Matches the sidebar's expanded width */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+.content.collapsed {
+  margin-left: -80px; /* Matches the sidebar's collapsed width */
+  width: 100%; /* Adjust width to fit content */
+}
+
+.content.expanded {
+  margin-left: 0px; /* Matches the sidebar's expanded width */
+}
+
+/* App Title */
+.app-title {
+  font-size: 2.5em;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1abc9c;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  padding-left: 20px;
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links .navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.navbar-links .navbar-link:hover {
+  color: #16a085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .content.collapsed,
+  .content.expanded {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,226 @@
+/* Container for the login page */
+.A-login-container {
+  display: flex;
+  justify-content: space-between; /* Space between form and image */
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 20px;
+  padding-left: 300px;
+  margin-left: 20px;
+  
+}
+.dark.A-login-container {
+  display: flex;
+  justify-content: space-between; /* Space between form and image */
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0F172A;
+  padding: 20px;
+  padding-left: 300px;
+  margin-left: 20px;
+  
+}
+
+/* Form Wrapper */
+.A-l-form-wrapper {
+  background: rgba(251, 251, 251, 0.1);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 600px;
+  max-width: 750px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-in-out;
+  margin-right: 200px;
+  
+}
+.dark.A-l-form-wrapper {
+  background: rgba(251, 251, 251, 0.1);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 600px;
+  max-width: 750px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-in-out;
+  margin-right: 200px;
+  
+}
+
+/* Title */
+.A-l-title {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.dark.A-l-title {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+
+/* Input Fields */
+.A-l-label {
+  display: block;
+  text-align: left;
+  color: #000000;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
+}
+.dark.A-l-label {
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+.A-l-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background: #d3d3d3; /* Light gray background */
+  color: black;
+  margin-bottom: 1rem;
+}
+.dark.A-l-input {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form input:focus {
+  border: 2px solid #1abc9c;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #1abc9c;
+}
+
+/* Buttons */
+.a-l-button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.admin-login-submit-btn, .admin-login-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.A-l-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.A-l-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.A-l-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Messages */
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: #1abc9c;
+  margin-bottom: 1rem;
+}
+
+/* Forgot Password */
+.forgot-password-link {
+  margin-top: 10px;
+}
+
+.forgot-password-link a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+/* Image Wrapper
+.login-image-wrapper {
+  width: 25%; /* Adjust width as needed */
+  /* max-width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px; /* Adjust margin as needed */
+/* } */
+
+/* .login-image {
+  width: 100%;
+  height: auto;
+  animation: fadeIn 0.8s ease-in-out;
+} */ 
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Stack form and image vertically on small screens */
+  }
+/* 
+  .login-image-wrapper {
+    width: 100%;
+    margin-top: 20px;
+  } */
+
+  .form-wrapper {
+    width: 100%;
+    padding: 2rem;
+  }
+}

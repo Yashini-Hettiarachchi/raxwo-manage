@@ -1,0 +1,44 @@
+.action-menu button {
+  background: #fff !important;
+  color: #000 !important;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  margin: 2px 0;
+  width: 100%;
+  text-align: left;
+  height: 40px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.action-menu button:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.dark .action-menu button:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.p-edit-btn-icon,
+.p-delete-btn-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.p-view-btn-icon,
+.p-bill-btn-icon,
+.p-job-bill-btn-icon,
+.p-select-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+} 

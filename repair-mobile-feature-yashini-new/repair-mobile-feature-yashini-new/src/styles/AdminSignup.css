@@ -1,0 +1,218 @@
+/* Container for the signup page */
+.a-signup-container {
+  display: flex;
+  justify-content: space-between; /* Space between form and image */
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  padding-left: 250px; /* Adjust the space between form and image */
+}
+.dark.a-signup-container {
+  display: flex;
+  justify-content: space-between; /* Space between form and image */
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0F172A;
+  padding: 20px;
+  padding-left: 250px; /* Adjust the space between form and image */
+}
+
+/* Form Wrapper */
+.a-signup-form-wrapper {
+  background: whitesmoke;
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 500px;
+  max-width: 750px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-in-out;
+  margin-left: 50px;
+}
+.dark.a-signup-form-wrapper {
+  background: rgba(251, 251, 251, 0.1);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 500px;
+  max-width: 750px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-in-out;
+  margin-left: 50px;
+}
+
+/* Title */
+.a-signup-title {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+.dark.a-signup-title {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+
+/* Input fields */
+.a-signup-label {
+  display: block;
+  text-align: left;
+  color: #000000;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+.dark.a-signup-label {
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+.a-signup-input[type="text"],
+.a-signup-input[type="email"],
+.a-signup-input[type="password"]{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background: #d3d3d3; /* Light gray background */
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.dark.a-signup-input[type="text"],
+.dark.a-signup-input[type="email"],
+.dark.a-signup-input[type="password"]{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-style: roboto;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+}
+
+.a-signup-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.a-signup-input:focus {
+  border: 2px solid #1abc9c;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #1abc9c;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.admin-signup-submit-btn, .admin-signup-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.a-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.a-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Messages */
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: #1abc9c;
+  margin-bottom: 1rem;
+}
+
+/* Image Wrapper */
+.signup-image-wrapper {
+  width: 25%; /* Adjust width as needed */
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 140px; /* Adjust margin as needed */
+}
+
+.signup-image {
+  width: 100%;
+  height: auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column; /* Stack form and image vertically on small screens */
+  }
+
+  .signup-image-wrapper {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .signup-form-wrapper {
+    width: 100%;
+    padding: 2rem;
+  }
+}

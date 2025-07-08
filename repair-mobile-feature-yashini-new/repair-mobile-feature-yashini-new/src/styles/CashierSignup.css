@@ -1,0 +1,197 @@
+/* Container */
+.u-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.dark.u-signup-container {
+  background-color: #1a2330;
+}
+
+/* Form Wrapper */
+.u-signup-form-wrapper {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.dark.u-signup-form-wrapper {
+  background: #2a344a;
+  color: #ffffff;
+}
+
+/* Title */
+.u-signup-title {
+  font-size: 1.8rem;
+  font-family: 'Arial', sans-serif;
+  color: #1a2a44;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.dark.u-signup-title {
+  color: #e0e7ff;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label */
+.u-signup-label {
+  display: block;
+  text-align: left;
+  color: #4a5b6c;
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.dark.u-signup-label {
+  color: #b0c4de;
+}
+
+/* Input and Select Fields */
+.u-signup-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d9e6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: 'Arial', sans-serif;
+  background: #ffffff;
+  color: #1a2a44;
+  margin-bottom: 0;
+  transition: border-color 0.3s ease;
+}
+
+.dark.u-signup-input {
+  background: #344563;
+  color: #e0e7ff;
+  border-color: #4a5b6c;
+}
+
+.u-signup-input:focus {
+  border-color: #1e3a8a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cashier-signup-submit-btn, .cashier-signup-cancel-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.u-submit-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.u-cancel-btn {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.u-cancel-btn:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Messages */
+.success-message {
+  color: #16a34a;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.loading {
+  color: #1e3a8a;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .u-signup-form-wrapper {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .u-signup-title {
+    font-size: 1.5rem;
+  }
+
+  .u-signup-input {
+    font-size: 0.9rem;
+  }
+
+  .u-submit-btn,
+  .u-cancel-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .u-submit-btn,
+  .u-cancel-btn {
+    width: 100%;
+  }
+}

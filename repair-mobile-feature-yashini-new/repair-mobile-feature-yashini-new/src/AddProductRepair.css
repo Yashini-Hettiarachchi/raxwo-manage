@@ -1,0 +1,431 @@
+/* Add Product Repair CSS */
+.repair-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.repair-container {
+  background: whitesmoke;
+  padding: 25px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh; /* Set maximum height to 90% of viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dark.repair-container {
+  background: #0F172A;
+  color: white;
+}
+
+.repair-title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
+  color: #1a68bc;
+}
+
+.dark .repair-title {
+  color: #63b3ed;
+}
+
+/* Form layout */
+.repair-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.repair-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Column styling */
+.repair-column {
+  text-align: left;
+}
+
+/* Section headers */
+.repair-section-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1a68bc;
+}
+
+.dark .repair-section-header {
+  color: #fff;
+  border-bottom-color: #63b3ed;
+}
+
+/* Form labels */
+.repair-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  color: #333;
+}
+
+.dark .repair-label {
+  color: #e2e8f0;
+}
+
+/* Form inputs */
+.repair-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+.dark .repair-input {
+  background-color: #2d3748;
+  color: #fff;
+  border-color: #4a5568;
+}
+
+.repair-input:focus {
+  outline: none;
+  border-color: #1a68bc;
+  box-shadow: 0 0 0 2px rgba(26, 104, 188, 0.2);
+}
+
+.dark .repair-input:focus {
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.2);
+}
+
+/* Textarea */
+.repair-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 80px;
+  background-color: #fff;
+  color: #333;
+}
+
+.dark .repair-textarea {
+  background-color: #2d3748;
+  color: #fff;
+  border-color: #4a5568;
+}
+
+/* Button group */
+.repair-button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  background-color: whitesmoke;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  z-index: 10;
+}
+
+.dark .repair-button-group {
+  background-color: #0F172A;
+  border-top-color: #4a5568;
+}
+
+/* Buttons */
+.repair-submit-btn,
+.repair-cancel-btn,
+.repair-download-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  height: 48px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary Action Button - Add/Submit */
+.repair-submit-btn {
+  background-color: #10b981; /* Green for positive actions */
+  color: white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.repair-submit-btn:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.repair-submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+/* Secondary Action Button - Download */
+.repair-download-btn {
+  background-color: #3b82f6; /* Blue for informational actions */
+  color: white;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.repair-download-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.repair-download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+/* Destructive Action Button - Cancel/Delete/Close */
+.repair-cancel-btn {
+  background-color: #ef4444; /* Red for destructive actions */
+  color: white;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.repair-cancel-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.repair-cancel-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+/* Disabled state for all buttons */
+.repair-submit-btn:disabled,
+.repair-download-btn:disabled,
+.repair-cancel-btn:disabled {
+  background-color: #9ca3af;
+  color: #6b7280;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.repair-submit-btn:disabled:hover,
+.repair-download-btn:disabled:hover,
+.repair-cancel-btn:disabled:hover {
+  background-color: #9ca3af;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Messages */
+.repair-success-message {
+  color: #38a169;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.repair-error-message {
+  color: #e53e3e;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling for better user experience */
+.repair-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.repair-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.repair-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.repair-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark .repair-container::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.dark .repair-container::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+.dark .repair-container::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Repair Cart Section */
+.repair-cart-section {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.dark .repair-cart-section {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+.repair-cart-header {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.dark .repair-cart-header {
+  color: #e2e8f0;
+}
+
+.repair-cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.repair-cart-table th,
+.repair-cart-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.dark .repair-cart-table th,
+.dark .repair-cart-table td {
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.repair-cart-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.dark .repair-cart-table th {
+  background-color: #4a5568;
+}
+
+.repair-cart-total-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.repair-cart-total-value {
+  font-weight: bold;
+}
+
+/* Total Repair Cost */
+.repair-total-cost {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  border: 1px solid #b3d7ff;
+}
+
+.dark .repair-total-cost {
+  background-color: #2c5282;
+  border-color: #4299e1;
+}
+
+.repair-total-cost-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a68bc;
+  text-align: center;
+}
+
+.dark .repair-total-cost-value {
+  color: #63b3ed;
+}
+
+/* No items message */
+.no-items-message {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.dark .no-items-message {
+  background-color: #3a4556;
+  color: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .repair-form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .repair-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .repair-container {
+    width: 95%;
+    padding: 15px;
+  }
+}
